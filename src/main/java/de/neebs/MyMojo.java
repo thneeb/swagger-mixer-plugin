@@ -30,6 +30,10 @@ public class MyMojo
     private String inputFile;
 
     public void execute() throws MojoExecutionException {
+        File file = new File(outputFile);
+        if (file.getParentFile() != null) {
+            file.getParentFile().mkdirs();
+        }
         try {
             SwaggerMixer swaggerMixer = new SwaggerMixer();
             swaggerMixer.run(new ObjectMapper(), inputFile, outputFile);
