@@ -1,6 +1,5 @@
 package de.neebs;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -17,9 +16,7 @@ import java.io.IOException;
  * Goal which touches a timestamp file.
  */
 @Mojo( name = "mixer", defaultPhase = LifecyclePhase.GENERATE_SOURCES )
-public class MyMojo
-    extends AbstractMojo
-{
+public class MyMojo extends AbstractMojo {
     /**
      * Location of the file.
      */
